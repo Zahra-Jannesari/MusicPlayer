@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#272727"
+        android:padding="8dp"
+        android:layout_margin="2dp">
+
+        <ImageView
+            android:id="@+id/imgview_singer_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtview_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/imgview_singer_pic"
+            tools:text="TextView"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</layout>

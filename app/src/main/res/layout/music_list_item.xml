@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="musicViewModel"
+            type="com.example.musicplayer.viewmodel.MusicViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#272727"
+        android:padding="8dp"
+        android:layout_margin="2dp"
+        android:onClick="@{() -> musicViewModel.playMusic()}">
+
+        <ImageView
+            android:id="@+id/imgview_music_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtview_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/imgview_music_pic"
+            tools:text="TextView"
+            android:textSize="16sp"
+            android:text="@{musicViewModel.musicName}"
+            />
+
+        <TextView
+            android:id="@+id/txtview_singer_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtview_music_name"
+            android:layout_toRightOf="@+id/imgview_music_pic"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:textColor="#939292"
+            tools:text="TextView"
+            android:text="@{musicViewModel.singer}"/>
+
+    </RelativeLayout>
+</layout>
